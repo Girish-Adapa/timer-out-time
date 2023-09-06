@@ -43,8 +43,8 @@ const Timer = () => {
 
       return (
         <>
-          <div className="countdown-container">
-"Jaldi vaha se hato.................."</div>
+          <div className="message-container">
+"Jaldi vaha se hato.."</div>
         </>
       );
     } else {

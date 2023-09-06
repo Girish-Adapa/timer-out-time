@@ -33,3 +33,6 @@
 .bold-label {
     font-weight: bold;
   }
+
+.message.container {
+    font-size: 50px;

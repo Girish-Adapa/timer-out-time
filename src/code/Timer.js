@@ -43,7 +43,8 @@ const Timer = () => {
 
       return (
         <>
-          <div>00:00:00</div>
+          <div className="countdown-container>
+"Jaldi vaha se hato.................."</div>
         </>
       );
     } else {

@@ -43,7 +43,7 @@ const Timer = () => {
 
       return (
         <>
-          <div className="countdown-container>
+          <div className="countdown-container">
 "Jaldi vaha se hato.................."</div>
         </>
       );

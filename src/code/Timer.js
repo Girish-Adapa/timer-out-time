@@ -43,8 +43,7 @@ const Timer = () => {
 
       return (
         <>
-          <div className="message-container">
-"Jaldi vaha se hato.."</div>
+          <div className="message-container">"Jaldi vaha se hato.."</div>
         </>
       );
     } else {
@@ -63,6 +62,7 @@ const Timer = () => {
       <div className="timer-container">
         <div className="time-picker-container">
           <TimePicker
+            className="time-picker"
             onChange={handleTime}
             format="HH:mm:ss"
             placeholder="Select In Time"
@@ -87,7 +87,13 @@ const Timer = () => {
               </div>
             </div>
           )}
+        </div>
+        <div>
           {inTime && <Countdown date={outTime.toDate()} renderer={renderer} />}
+        </div>
+        <div className="footer">
+          {"Copyright  "}
+          &copy; {new Date().getFullYear()}, Girish-Sai-Adapa
         </div>
       </div>
     </>

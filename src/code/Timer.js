@@ -1,4 +1,4 @@
-import { TimePicker } from "antd";
+import { Card, TimePicker, Row, Col } from "antd";
 import React, { useState } from "react";
 import Countdown, { zeroPad } from "react-countdown";
 import moment from "moment";
@@ -59,43 +59,56 @@ const Timer = () => {
 
   return (
     <>
-      <div className="timer-container">
-        <div className="time-picker-container">
-          <TimePicker
-            className="time-picker"
-            onChange={handleTime}
-            format="HH:mm:ss"
-            placeholder="Select In Time"
-          />
-        </div>
-        <div>
-          {inTime && (
-            <div className="time-info">
-              <div>
-                In Time:
-                <span className="time-label bold-label">
-                  {" "}
-                  {inTime.format("HH:mm:ss")}
-                </span>{" "}
+        <Col
+          xs={{ span: 24 }}
+          sm={{ span: 24 }}
+          md={{ span: 24 }}
+          lg={{ span: 24 }}
+        >
+          <div className="outer-container">
+            <Card className="card">
+              <div className="timer-container">
+                <div className="time-picker-container">
+                  <TimePicker
+                    className="time-picker"
+                    onChange={handleTime}
+                    format="HH:mm:ss"
+                    placeholder="Select In Time"
+                  />
+                </div>
+                <div>
+                  {inTime && (
+                    <div className="time-info">
+                      <div>
+                        In Time:
+                        <span className="time-label bold-label">
+                          {" "}
+                          {inTime.format("HH:mm:ss")}
+                        </span>{" "}
+                      </div>
+                      <div>
+                        Out Time:
+                        <span className="time-label bold-label">
+                          {" "}
+                          {outTime.format("HH:mm:ss")}
+                        </span>{" "}
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div>
+                  {inTime && (
+                    <Countdown date={outTime.toDate()} renderer={renderer} />
+                  )}
+                </div>
+                <div className="footer">
+                  {"Copyright  "}
+                  &copy; {new Date().getFullYear()}, Girish-Sai-Adapa
+                </div>
               </div>
-              <div>
-                Out Time:
-                <span className="time-label bold-label">
-                  {" "}
-                  {outTime.format("HH:mm:ss")}
-                </span>{" "}
-              </div>
-            </div>
-          )}
-        </div>
-        <div>
-          {inTime && <Countdown date={outTime.toDate()} renderer={renderer} />}
-        </div>
-        <div className="footer">
-          {"Copyright  "}
-          &copy; {new Date().getFullYear()}, Girish-Sai-Adapa
-        </div>
-      </div>
+            </Card>
+          </div>
+        </Col>
     </>
   );
 };

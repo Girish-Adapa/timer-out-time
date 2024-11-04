@@ -43,7 +43,7 @@ const Timer = () => {
 
       return (
         <>
-          <div className="message-container">"Jaldi vaha se hato.."</div>
+          <div className="message-container" style={{color: 'white'}}>"Jaldi vaha se hato.."</div>
         </>
       );
     } else {

@@ -47,28 +47,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgb(136, 136, 223);
+  color: white;
 }
 
 .card {
-    height: 80vh;
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
-    background: #f5f5f5;
-    margin-top: 30px;
-    background-image: url("bgimage.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  
+  height: 80vh;
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+  background: #f5f5f5;
+  margin-top: 30px;
+  background-image: url("bgimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
 .outer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  display: flex;
+  justify-content: center;
+  background-color: #111827;
+  height: 100vh;
+  width: 100vw;
+}

@@ -1,12 +1,8 @@
-import './App.css';
-import MainPage from './code/Timer'
+import "./App.css";
+import MainPage from "./code/Timer";
 
 function App() {
-  return (
-    <div>
-      <MainPage />
-    </div>
-  );
+  return <MainPage />;
 }
 
 export default App;
